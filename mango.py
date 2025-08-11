@@ -1,14 +1,16 @@
+
+
 import time
 import random
 import os
 
-# A simple class to define game participants.
 class Participant:
-    """Represents a single participant in the game."""
+    """Represents a single participant in the game with a new metric: erection_level."""
     def __init__(self, name, type):
         self.name = name
         self.type = type
         self.partner = None
+        self.erection_level = 0
         self.is_player = False
 
 def clear_screen():
@@ -28,7 +30,7 @@ def print_dialogue_scene(lines, skippable=False):
     clear_screen()
     if skippable:
         skip_choice = input("This is a long scene. Would you like to skip it? (yes/no): ").strip().lower()
-        if skip_choice == 'yes' or skip_choice == 'y':
+        if skip_choice in ['yes', 'y']:
             print_narrative("Scene skipped.")
             return
 
@@ -36,30 +38,75 @@ def print_dialogue_scene(lines, skippable=False):
         print_narrative(line, 0.05)
     time.sleep(3)
 
-def generate_penalty_dialogue(player_name, guard_name):
-    """Generates the 100-line dialogue for the red light, green light penalty scene."""
+def generate_cum_challenge_punishment_dialogue(player_name, guard_name):
+    """Generates the dialogue for the Cum-Eating Challenge punishment."""
     dialogue = [
-        f"The moment you flinch, Guard {guard_name} is on you.",
-        "His hand clamps down on the back of your neck, fingers digging into your nerve endings.",
-        "'Movement detected,' his voice is a low growl, devoid of emotion.",
-        "'Penalty protocol initiated. On your feet.'",
-        "He doesn't let you walk; he drags you by your hair off the field.",
-        "The ground scrapes your knees as you stumble to keep up.",
-        "You're thrown into a small, concrete bunker. The steel door slams shut behind you.",
-        "Another guard is waiting. He's bigger, stripped to the waist, slick with sweat.",
-        "'Another failure,' the new guard smirks, cracking his knuckles.",
-        "'Get those pathetic clothes off. Now.'",
-        "Your fingers tremble as you undress, dropping your clothes onto the filthy floor.",
-        "The air is cold on your bare skin.",
-        "'On the wall. Hands flat against it. Spread your legs,' he commands.",
-        "You obey, pressing your palms against the damp, rough concrete.",
-        f"'You had one job, {player_name}. Stay still. You couldn't even do that.'",
-        "He walks up behind you, his body heat a menacing presence.",
-        "You hear the squelch of lube being applied.",
-        "He doesn't bother with foreplay or warning.",
-        "He just shoves two thick fingers into your ass, ripping a pained gasp from you.",
+        f"You failed to finish your portion. Guard {guard_name}'s smile vanishes, replaced by a cruel frown.",
+        "'You think you're too good for it?' he spits. 'We'll teach you some manners.'",
+        "He shoves you to your knees, forcing your head down.",
+        "Another guard stands before you, his pants unzipped, a swollen cock ready.",
+        "'You'll take his cum, and you'll like it,' the first guard commands.",
+        "The second guard grabs your hair, yanking your head back to expose your throat.",
+        "He forces his cock into your mouth, a gag-inducing invasion.",
+        "He pounds your throat with a furious rhythm, his hips thrusting violently.",
+        "You're a human fuck doll, a mere hole for him to use.",
+        "You try to pull away, but their grip is too strong.",
+        "He roars as he cums, a hot, thick flood of semen filling your mouth.",
+        "He pulls out, and the first guard grabs a dirty rag, shoving it into your mouth.",
+        "He uses it to wipe the cum from your face, smearing it across your cheeks.",
+        "'Remember this,' he whispers. 'This is what happens when you don't obey.'",
+        "He yanks the rag from your mouth, throwing it to the floor.",
+        "He then throws your clothes back at you, a crumpled heap.",
+        "You scramble to get dressed, your hands trembling, your body shaking from the ordeal.",
+        "They shove you back out onto the field, a final, brutal push.",
+        "You stumble back to the starting line, violated and broken, but still in the game.",
+        "The guards smirk, a look of sadistic satisfaction on their faces.",
+        "They give each other high-fives, their cruel voices echoing in the chamber.",
+        "The second guard, the one who fucked you, pats your ass as you walk away.",
+        "He whispers, 'Don't worry, you'll be back soon.'",
+        "The threat sends a shiver of fear and dread through your body.",
+        "You know he's right. You know you'll be back.",
+        "The thought fills you with a sense of hopelessness and despair.",
+        "You look at the other contestants, a shared look of fear and understanding on their faces.",
+        "You all know what awaits you if you fail.",
+        "The game isn't just about winning. It's about surviving.",
+        "And sometimes, surviving means enduring the unimaginable.",
+        "You take your place back at the starting line, your body and mind numb.",
+        "The game continues, a brutal cycle of hope and despair.",
+        "You're a puppet, and they're the puppet masters, pulling your strings, making you dance to their tune.",
+        "You're a plaything, a toy to be used and discarded.",
+        "But you're still in the game. You're still alive.",
+        "And that's all that matters. For now.",
+        "The memories of the guards' brutal actions linger, a constant reminder of your failure.",
+        "The taste of his cum is still on your tongue, a bitter, metallic tang.",
+        "The feeling of his hands on your body is still there, a phantom touch of pain and humiliation.",
+        "You're not the same person you were before you entered the bunker.",
+        "You're broken, but you're not defeated.",
+        "Not yet.",
+        "You clench your fists, a new resolve forming in your heart.",
+        "You will win this game. You will survive.",
+        "And you will get your revenge. Someday."
+    ]
+    while len(dialogue) < 100:
+        line_to_add = random.choice(dialogue)
+        dialogue.append(line_to_add)
+    return dialogue
+
+def generate_anal_lube_punishment_dialogue(player_name, guard_name):
+    """Generates the dialogue for the Anal Lube Challenge punishment."""
+    dialogue = [
+        f"You failed to resist arousal. Guard {guard_name}'s face twists with cruel delight.",
+        "'He couldn't handle it,' he jeers to the other guards. 'Time for a real lesson.'",
+        "He shoves you against a cold, steel table, face down.",
+        "Another guard stands over you, holding a large tube of lube.",
+        "'You wanted it, now you'll get it,' he says, smirking.",
+        "He squeezes the entire tube of lube onto your ass, a cold, wet flood.",
+        "The other guards laugh as you squirm, the sensation both humiliating and arousing.",
+        "One of the guards grabs a fistful of your hair, forcing your head up.",
+        "He whispers in your ear, 'You'll be a good little whore for us.'",
+        "The guard with the lube shoves two fingers into your ass, a slow, painful invasion.",
         "He works them in and out cruelly, stretching you open for what's next.",
-        "'Yeah, you're tight,' he grunts. 'We'll fix that.'",
+        "You cry out, but it's muffled by the sounds of the other guards' laughter.",
         "He pulls his fingers out and you can feel the head of his cock pressing against you.",
         "It's thick and hard.",
         "He forces his way in, a slow, tearing invasion that makes you cry out.",
@@ -144,13 +191,16 @@ def generate_penalty_dialogue(player_name, guard_name):
         "You will win this game. You will survive.",
         "And you will get your revenge. Someday."
     ]
+    while len(dialogue) < 100:
+        line_to_add = random.choice(dialogue)
+        dialogue.append(line_to_add)
     return dialogue
 
 def generate_seduction_punishment_dialogue(player_name, guard_name):
     """Generates the 100-line dialogue for the 'Seduction Chamber' penalty scene."""
     dialogue = [
-        f"Your attempt fails. Guard {guard_name}'s face twists into a snarl.",
-        "'Pathetic,' he growls. 'That's not how you please a man.'",
+        f"Your dialogue choice was incorrect. Guard {guard_name}'s face twists into a snarl.",
+        "'Pathetic,' he growls. 'That's not how you please a man. Now you will learn.'",
         "He yanks you by your collar, pulling you towards a small, padded cell.",
         "The cell is dark and smells of sweat and something else... something metallic.",
         "Inside, two more guards are waiting. They are both large, muscular, and look angry.",
@@ -212,6 +262,9 @@ def generate_seduction_punishment_dialogue(player_name, guard_name):
         "You will win this game. You will survive.",
         "And you will get your revenge. Someday."
     ]
+    while len(dialogue) < 100:
+        line_to_add = random.choice(dialogue)
+        dialogue.append(line_to_add)
     return dialogue
 
 def generate_sex_night_dialogue(player_name, partner_name):
@@ -331,36 +384,45 @@ def stage_four_red_light_green_light(survivors, player):
 def stage_seduction_chamber(survivors, player):
     clear_screen()
     print_narrative("--- STAGE 5: THE SEDUCTION CHAMBER ---")
-    print_narrative("Each contestant must now 'seduce' a guard to prove their worth. Failure leads to a brutal punishment.")
-    remaining_contestants = list(survivors)
+    print_narrative("You are led into a large room with two guards. The challenge is to participate in a threesome and satisfy them with your words. Only the correct dialogue choices will lead to victory.")
     
-    eliminated_this_round = []
-    for contestant in list(remaining_contestants):
-        if contestant.is_player:
-            print_narrative(f"\nIt is your turn, {player.name}.")
-            print_narrative("A guard is waiting for you. You must try to seduce him.")
-            choice = input("Choose your approach: [1] Whisper dirty things, [2] Grind against him, [3] Try to kiss him: ")
-            
-            succeeded = random.random() > 0.5
-            
-            if succeeded:
-                print_narrative(f"Your attempt is successful. The guard smiles, pleased. You pass.")
-            else:
-                print_narrative("Your attempt fails. The guard's face darkens with anger.")
-                dialogue = generate_seduction_punishment_dialogue(player.name, "Marcus")
-                print_dialogue_scene(dialogue, skippable=True)
-                print_narrative("You have served your punishment. You may continue.")
+    if not player in survivors:
+        return survivors
+
+    print_narrative(f"\nIt is your turn, {player.name}.")
+    
+    rounds_passed = 0
+    while rounds_passed < 3:
+        clear_screen()
+        print_narrative(f"Round {rounds_passed + 1} of 3")
+        guard_1 = "Marcus"
+        guard_2 = "Jax"
+        
+        if rounds_passed == 0:
+            print_narrative(f"{guard_1}: 'You've got a tight little ass. I can already feel my cock getting hard.'")
+            print_narrative(f"{guard_2}: 'Don't get ahead of yourself, {player.name}. We'll see if you can handle both of us.'")
+        elif rounds_passed == 1:
+            print_narrative(f"{guard_1}: 'He's a good boy. He knows how to take a pounding.'")
+            print_narrative(f"{guard_2}: 'I think he's enjoying this more than he's letting on. Look at his face.'")
+        elif rounds_passed == 2:
+            print_narrative(f"{guard_1}: 'I'm about to cum inside him. I hope he's ready.'")
+            print_narrative(f"{guard_2}: 'He's so wet and tight. I don't think I'll ever get enough of him.'")
+        
+        print_narrative("\nWhat do you say?")
+        choice = input("[1] 'Please use me.'\n[2] 'I don't like this.'\n[3] 'I want to win.'\n[4] 'I will please you.'\nYour choice: ")
+        
+        if choice in ['1', '4']:
+            print_narrative("You chose the correct option. The guards grin, pleased with your answer.")
+            rounds_passed += 1
         else:
-            print_narrative(f"{contestant.name} attempts to seduce a guard.")
-            succeeded = random.random() > 0.5
-            if succeeded:
-                print_narrative(f"{contestant.name} succeeds and passes.")
-            else:
-                print_narrative(f"{contestant.name} fails and is eliminated.")
-                eliminated_this_round.append(contestant)
-    
-    for e in eliminated_this_round: remaining_contestants.remove(e)
-    return remaining_contestants
+            print_narrative("Your dialogue choice was incorrect. The guards' smiles vanish.")
+            dialogue = generate_seduction_punishment_dialogue(player.name, "Marcus")
+            print_dialogue_scene(dialogue, skippable=True)
+            print_narrative("You have failed the challenge and are eliminated.")
+            return [p for p in survivors if p.is_player != True]
+
+    print_narrative("\nYou have successfully navigated the guards' dialogue. You pass the challenge.")
+    return survivors
 
 def stage_try_not_to_cum(survivors, player):
     clear_screen()
@@ -395,6 +457,71 @@ def stage_try_not_to_cum(survivors, player):
     for e in eliminated_this_round: remaining_contestants.remove(e)
     return remaining_contestants
 
+def stage_cum_eating_challenge(survivors, player):
+    clear_screen()
+    print_narrative("--- STAGE 7: THE CUM-EATING CHALLENGE ---")
+    print_narrative("You are presented with a bowl of cum. You must consume all of it to pass. Refusal or failure results in a severe punishment.")
+    
+    remaining_contestants = list(survivors)
+    
+    eliminated_this_round = []
+    for contestant in list(remaining_contestants):
+        if contestant.is_player:
+            input(f"It is your turn, {player.name}. Press Enter to face the challenge.")
+            choice = input("Do you [1] Eat it or [2] Refuse? ")
+            
+            if choice == '1':
+                print_narrative("You force yourself to swallow it all. The guards nod in approval. You pass.")
+            else:
+                print_narrative("You refuse the challenge. The guards prepare your punishment.")
+                dialogue = generate_cum_challenge_punishment_dialogue(player.name, "Jax")
+                print_dialogue_scene(dialogue, skippable=True)
+                print_narrative("You have served your punishment. You may continue.")
+        else:
+            print_narrative(f"{contestant.name} is now facing the challenge.")
+            passed = random.random() > 0.5
+            if passed:
+                print_narrative(f"{contestant.name} passes the challenge.")
+            else:
+                print_narrative(f"{contestant.name} fails and is eliminated.")
+                eliminated_this_round.append(contestant)
+    
+    for e in eliminated_this_round: remaining_contestants.remove(e)
+    return remaining_contestants
+
+def stage_anal_lube_challenge(survivors, player):
+    clear_screen()
+    print_narrative("--- STAGE 8: THE ANAL LUBE CHALLENGE ---")
+    print_narrative("The guards will apply lube to your ass. You must remain unaroused for one minute. If your penis gets hard, you fail.")
+    
+    remaining_contestants = list(survivors)
+    
+    eliminated_this_round = []
+    for contestant in list(remaining_contestants):
+        if contestant.is_player:
+            input(f"It is your turn, {player.name}. Press Enter to begin the challenge.")
+            
+            passed = random.random() > 0.4
+            
+            if passed:
+                print_narrative("You manage to stay soft, enduring the stimulation without arousal. You pass.")
+            else:
+                print_narrative("You couldn't help it. Your erection is undeniable. The guards prepare your punishment.")
+                dialogue = generate_anal_lube_punishment_dialogue(player.name, "Marcus")
+                print_dialogue_scene(dialogue, skippable=True)
+                print_narrative("You have served your punishment. You may continue.")
+        else:
+            print_narrative(f"{contestant.name} is now taking the challenge.")
+            passed = random.random() > 0.6
+            if passed:
+                print_narrative(f"{contestant.name} succeeds.")
+            else:
+                print_narrative(f"{contestant.name} fails and is eliminated.")
+                eliminated_this_round.append(contestant)
+    
+    for e in eliminated_this_round: remaining_contestants.remove(e)
+    return remaining_contestants
+
 # --- MAIN GAME LOGIC ---
 def run_game():
     participants = [
@@ -408,7 +535,7 @@ def run_game():
     
     clear_screen()
     print_narrative(f"--- WELCOME TO FEMBOY SQUID GAMES 2 ---")
-    print_narrative(f"You are {player_character.name}, a {player_character.type}. Survive.")
+    print_narrative(f"You are {player_character.name}, a {player_character.type}. Your goal is to get your penis hard.")
     input("\nPress Enter to begin...")
 
     s4_survivors = stage_four_red_light_green_light(participants, player_character)
@@ -426,8 +553,16 @@ def run_game():
     s6_survivors = stage_try_not_to_cum(s5_survivors, player_character)
     if not player_character in s6_survivors:
         print_narrative("Eliminated."); return
+        
+    s7_survivors = stage_cum_eating_challenge(s6_survivors, player_character)
+    if not player_character in s7_survivors:
+        print_narrative("Eliminated."); return
+        
+    s8_survivors = stage_anal_lube_challenge(s7_survivors, player_character)
+    if not player_character in s8_survivors:
+        print_narrative("Eliminated."); return
 
-    s2_survivors = stage_two_bedroom_task(s6_survivors, player_character)
+    s2_survivors = stage_two_bedroom_task(s8_survivors, player_character)
     
     s3_survivors = stage_three_dildo_roulette(s2_survivors, player_character)
     if not player_character in s3_survivors:
