@@ -1,5 +1,3 @@
-
-
 import time
 import random
 import os
@@ -196,8 +194,8 @@ def generate_anal_lube_punishment_dialogue(player_name, guard_name):
         dialogue.append(line_to_add)
     return dialogue
 
-def generate_seduction_punishment_dialogue(player_name, guard_name):
-    """Generates the 100-line dialogue for the 'Seduction Chamber' penalty scene."""
+def generate_threesome_jerk_off_punishment_dialogue(player_name, guard_name):
+    """Generates the 100-line dialogue for the 'Threesome Jerk-off Challenge' penalty scene."""
     dialogue = [
         f"Your dialogue choice was incorrect. Guard {guard_name}'s face twists into a snarl.",
         "'Pathetic,' he growls. 'That's not how you please a man. Now you will learn.'",
@@ -381,45 +379,45 @@ def stage_four_red_light_green_light(survivors, player):
                 time.sleep(1)
     return remaining_contestants
 
-def stage_seduction_chamber(survivors, player):
+def stage_threesome_jerk_off(survivors, player):
     clear_screen()
-    print_narrative("--- STAGE 5: THE SEDUCTION CHAMBER ---")
-    print_narrative("You are led into a large room with two guards. The challenge is to participate in a threesome and satisfy them with your words. Only the correct dialogue choices will lead to victory.")
+    print_narrative("--- STAGE 5: THE THREESOME JERK-OFF CHALLENGE ---")
+    print_narrative("You are led into a large room with two guards, Jax and Marcus. The challenge is to participate in a threesome jerk-off session and satisfy them with your words. Only the correct dialogue choices will lead to victory.")
     
     if not player in survivors:
         return survivors
 
-    print_narrative(f"\nIt is your turn, {player.name}.")
+    print_narrative(f"\nIt is your turn, {player.name}. Your hands are on your own cock, and theirs are on theirs, all of you stroking at once.")
     
     rounds_passed = 0
     while rounds_passed < 3:
         clear_screen()
         print_narrative(f"Round {rounds_passed + 1} of 3")
-        guard_1 = "Marcus"
-        guard_2 = "Jax"
+        guard_1 = "Jax"
+        guard_2 = "Marcus"
         
         if rounds_passed == 0:
-            print_narrative(f"{guard_1}: 'You've got a tight little ass. I can already feel my cock getting hard.'")
-            print_narrative(f"{guard_2}: 'Don't get ahead of yourself, {player.name}. We'll see if you can handle both of us.'")
+            print_narrative(f"{guard_1} strokes faster, his cock a blur. 'You've got a nice one, but can you keep up?'")
+            print_narrative(f"{guard_2} groans, watching you. 'Don't get distracted. Show us how much you want to please us.'")
         elif rounds_passed == 1:
-            print_narrative(f"{guard_1}: 'He's a good boy. He knows how to take a pounding.'")
-            print_narrative(f"{guard_2}: 'I think he's enjoying this more than he's letting on. Look at his face.'")
+            print_narrative(f"{guard_1} moans, his eyes half-closed. 'I love the way you're touching yourself. So fucking hot.'")
+            print_narrative(f"{guard_2} matches your pace. 'I think he's enjoying this more than he's letting on. Look at his face.'")
         elif rounds_passed == 2:
-            print_narrative(f"{guard_1}: 'I'm about to cum inside him. I hope he's ready.'")
-            print_narrative(f"{guard_2}: 'He's so wet and tight. I don't think I'll ever get enough of him.'")
+            print_narrative(f"{guard_1} pulls his hand away for a second, his cock dripping pre-cum. 'I'm about to cum. Are you ready to see it?'")
+            print_narrative(f"{guard_2} pants, his voice raw. 'I'm so close. He's making me so fucking horny. I don't think I'll ever get enough.'")
         
         print_narrative("\nWhat do you say?")
-        choice = input("[1] 'Please use me.'\n[2] 'I don't like this.'\n[3] 'I want to win.'\n[4] 'I will please you.'\nYour choice: ")
+        choice = input("[1] 'I'm yours. Please use me.'\n[2] 'This is so humiliating.'\n[3] 'I want to win the game.'\n[4] 'I'll do anything to please you.'\nYour choice: ")
         
         if choice in ['1', '4']:
-            print_narrative("You chose the correct option. The guards grin, pleased with your answer.")
+            print_narrative("You chose the correct option. The guards grin, pleased with your submissive answer.")
             rounds_passed += 1
         else:
-            print_narrative("Your dialogue choice was incorrect. The guards' smiles vanish.")
-            dialogue = generate_seduction_punishment_dialogue(player.name, "Marcus")
+            print_narrative("Your dialogue choice was incorrect. The guards' smiles vanish, replaced with anger.")
+            dialogue = generate_threesome_jerk_off_punishment_dialogue(player.name, "Marcus")
             print_dialogue_scene(dialogue, skippable=True)
             print_narrative("You have failed the challenge and are eliminated.")
-            return [p for p in survivors if p.is_player != True]
+            return [p for p in survivors if not p.is_player]
 
     print_narrative("\nYou have successfully navigated the guards' dialogue. You pass the challenge.")
     return survivors
@@ -546,7 +544,7 @@ def run_game():
     if not player_character in s1_survivors:
         print_narrative("Eliminated."); return
         
-    s5_survivors = stage_seduction_chamber(s1_survivors, player_character)
+    s5_survivors = stage_threesome_jerk_off(s1_survivors, player_character)
     if not player_character in s5_survivors:
         print_narrative("Eliminated."); return
         
